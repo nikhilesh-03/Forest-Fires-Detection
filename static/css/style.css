@@ -13,8 +13,14 @@
 	font-size: inherit;
 }
 
-body{
-  background: url('../../Assets/bg.jpg');
-  background-size: 100%;
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  outline: none;
+  box-sizing: border-box;
+  color: black;
+  background-image: url('../../Assets/bg.jpg');
+  background-position: center;
   background-size: cover;
 }

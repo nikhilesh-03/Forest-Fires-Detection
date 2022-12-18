@@ -1,4 +1,5 @@
 from flask import Flask,request, url_for, redirect, render_template
+from sklearn.preprocessing import MinMaxScaler
 import numpy as np
 import joblib
 
