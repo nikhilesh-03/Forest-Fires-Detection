@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler
 import joblib
 
 raw_df=pd.read_csv('forestfires.csv')
@@ -19,7 +19,7 @@ def preprocessing(df,task):
 
     X_train,X_test,Y_train,Y_test=train_test_split(X,Y,train_size=0.60,shuffle=True,random_state=0)
 
-    scaler=StandardScaler()
+    scaler=MinMaxScaler()
     scaler.fit(X_train)
 
     X_train=pd.DataFrame(scaler.transform(X_train),columns=X.columns)
